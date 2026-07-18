@@ -3,13 +3,16 @@
 <!-- build 20261.26.0410.0924                               -->
 <workbook original-version='18.1' source-build='2026.1.1 (20261.26.0410.0924)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
     <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
     <IntuitiveSorting />
     <IntuitiveSorting_SP2 />
     <MarkAnimation />
     <ObjectModelEncapsulateLegacy />
     <ObjectModelTableType />
     <SchemaViewerObjectModel />
+    <SetMembershipControl />
     <SheetIdentifierTracking />
     <SortTagCleanup />
     <WindowsPersistSimpleIdentifiers />
@@ -1748,6 +1751,65 @@
       <simple-id uuid='{E3255482-D64A-4E11-A804-2EC236957FE0}' />
     </worksheet>
   </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='3' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone forceUpdate='true' h='6125' id='5' type-v2='text' w='98400' x='800' y='1000'>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontsize='18'>FIFA World Cup 2026 Player Performance Dashboard</run>
+              </formatted-text>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='7' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='6' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone forceUpdate='true' h='6125' id='5' type-v2='text' w='98400' x='800' y='1000'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontsize='18'>FIFA World Cup 2026 Player Performance Dashboard</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{502E85EB-AFE5-480F-AD5A-E8AE9E149281}' />
+    </dashboard>
+  </dashboards>
   <windows saved-dpi-scale-factor='1.25' source-height='37'>
     <window class='worksheet' name='Sheet 1'>
       <cards>
@@ -2011,7 +2073,7 @@
       </viewpoint>
       <simple-id uuid='{0A0C63F6-92B7-4350-9B8C-64BD80E50ABC}' />
     </window>
-    <window class='worksheet' maximized='true' name='Sheet 9'>
+    <window class='worksheet' name='Sheet 9'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2031,8 +2093,80 @@
       </cards>
       <simple-id uuid='{AA7666A5-A39E-45AD-823F-5FEAF8D80E8D}' />
     </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints />
+      <active id='3' />
+      <simple-id uuid='{1B786ADC-81A0-46DA-92D7-ECAD29AB1A53}' />
+    </window>
   </windows>
   <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+      NAUgpv03GNW0SSRC4fAAAAAASUVORK5CYII=
+    </thumbnail>
     <thumbnail height='167' name='Sheet 1' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAACnCAYAAABHLVPlAAAACXBIWXMAABJ0AAASdAHeZh94
       AAAU30lEQVR4nO3df1BU573H8XeyogsIIigCESIEdBVQQA2imJqkV4s1aqz1V2NhUG9pdJKm
