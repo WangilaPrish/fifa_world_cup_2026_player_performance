@@ -1618,6 +1618,10 @@
           <style-rule element='axis'>
             <format attr='title' class='0' field='[federated.11bj9pw141gvyj1ct7esa0z0ke7k].[sum:goals:qk]' scope='cols' value='' />
           </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
         </style>
         <panes>
           <pane selection-relaxation-option='selection-relaxation-allow'>
