@@ -1141,7 +1141,23 @@
       <column caption='Tournament Stage' datatype='string' name='[tournament_stage]' role='dimension' type='nominal' />
       <column caption='Weight Kg' datatype='integer' name='[weight_kg]' role='measure' type='quantitative' />
       <column caption='Yellow Cards' datatype='integer' name='[yellow_cards]' role='measure' type='quantitative' />
+      <column-instance column='[match_result]' derivation='None' name='[none:match_result:nk]' pivot='key' type='nominal' />
       <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:match_result:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;W&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;L&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;D&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;Kenya&quot;' />
       </semantic-values>
@@ -1451,6 +1467,54 @@
       </table>
       <simple-id uuid='{420DE356-CC38-4324-94A1-FE37DC9F973C}' />
     </worksheet>
+    <worksheet name='Sheet 5'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Benton Sans Book'>Chart – Match Results Distribution</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FIFA World Cup 2026' name='federated.11bj9pw141gvyj1ct7esa0z0ke7k' />
+          </datasources>
+          <datasource-dependencies datasource='federated.11bj9pw141gvyj1ct7esa0z0ke7k'>
+            <column-instance column='[match_id]' derivation='CountD' name='[ctd:match_id:qk]' pivot='key' type='quantitative' />
+            <column caption='Match Id' datatype='string' name='[match_id]' role='dimension' type='nominal' />
+            <column caption='Match Result' datatype='string' name='[match_result]' role='dimension' type='nominal' />
+            <column-instance column='[match_result]' derivation='None' name='[none:match_result:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.11bj9pw141gvyj1ct7esa0z0ke7k].[none:match_result:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.11bj9pw141gvyj1ct7esa0z0ke7k].[ctd:match_id:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.11bj9pw141gvyj1ct7esa0z0ke7k].[none:match_result:nk]' />
+              <text column='[federated.11bj9pw141gvyj1ct7esa0z0ke7k].[ctd:match_id:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.11bj9pw141gvyj1ct7esa0z0ke7k].[none:match_result:nk]</rows>
+        <cols>[federated.11bj9pw141gvyj1ct7esa0z0ke7k].[ctd:match_id:qk]</cols>
+      </table>
+      <simple-id uuid='{FFA70B4A-3EF5-462C-82EF-1BDA4FF15792}' />
+    </worksheet>
   </worksheets>
   <windows saved-dpi-scale-factor='1.25' source-height='37'>
     <window class='worksheet' name='Sheet 1'>
@@ -1541,7 +1605,7 @@
       </viewpoint>
       <simple-id uuid='{EAAF2CC9-F262-4430-9675-4B8B01FC1DE9}' />
     </window>
-    <window class='worksheet' maximized='true' name='Sheet 4'>
+    <window class='worksheet' name='Sheet 4'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1567,6 +1631,42 @@
         </highlight>
       </viewpoint>
       <simple-id uuid='{8879B5C7-D26D-4C9F-91C4-A84DF6CD4C5A}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.11bj9pw141gvyj1ct7esa0z0ke7k].[none:match_result:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.11bj9pw141gvyj1ct7esa0z0ke7k].[none:match_id:nk]</field>
+            <field>[federated.11bj9pw141gvyj1ct7esa0z0ke7k].[none:match_result:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{EC2F2420-F9F8-48E0-9C8C-289009E69862}' />
     </window>
   </windows>
   <thumbnails>
@@ -1968,6 +2068,51 @@
       /4tgjSApikJGRgYWL16MwsJCtLW1uVw+lEgk+PDDD7F8+XIixn8ZrN2nxrqpUkNDA3p7eyEU
       ChEfH4+EhATMnDmTCPFfCmsFSfhvQswMgVUQQRJYBREkgVUQQRJYBREkgVX8HxZHRekqiEvN
       AAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='147' name='Sheet 5' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAACTCAYAAADYxhZeAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAIpUlEQVR4nO3db0wb9x3H8U/jUGwIAZHSGTIYBpu6hmyFtsqWNVPTVmydNjVSprWJNiXb
+      0NRuVSOFpVOiaZO6aZPC9mDa004Lbfog1dpSRreGtUmVVPuTbArljzG2gwkRxiEB7AAGYi63
+      B/yJsSG1Mb6L9/28JB7kfChf/cTbdzbc+R5VVVUQCbVB7wGI9MQASDQGQKIxABKNAZBoDIBE
+      YwAkGgMg0RgAicYASDQGQKIxABKNAZBoDIBEYwAkGgMg0RgAicYASDQGQKIxABKNAZBoDIBE
+      YwAkGgMg0RgAicYASDQGQKIxgDQLh8N6j5CUiYkJvUdI2HrMygBINAZAom3UewAJ9r22W+8R
+      aBU8ApBoDCDWrAd/P/lvBGK3hzrR2tyMs4NxD6Cz9T10T2ozHq0vBhArOw9zfR+i89ryzTPO
+      s+gYGkL7f3zLH1C8+NeZEDZu0m5EWj8MII4ZFus1uL0zUdsUuJw38OjeXTD3X0YoendPH9w1
+      Dtg0npLWBwNYgc1RgwHfQNQWD5z95bBYrKi62Q1nVBsBnxfmSgsMWg9J64IBrMBgqYS5y4ml
+      k52ADwMVDthQBJs9gD7P4gMhuHqAanu+PoNSyhjASvLtqDb14/LCuU7I1YPNDjsMACwOBwY9
+      C2koPlwK1sBu1m1SShEDWJEZ9ppRuL0KAAVe901UWY3zD5VbUNjtmn+XaLAfPksFynSclFLD
+      AFZRVmGFu88DwIO+gB22ooUHjA7U5FyCbwYIuLphXjgyUGZiAKsw2B0od3vh9znhtTpgWXok
+      H1X2MThdU/BdAiotRh2npFQxgNUYrai614Vz510wP7D8Tc4SqxX9zjb0BXj+n+kYwKqKYLOP
+      4vTpe1FljTnJsTlQ8fFpnOf5f8a7R1VVVe8h/p+Fw2E0/Hmf3mPQKngEINF4BEizcDiMnJwc
+      vcdI2MTEBPLy8vQeIyHrMSuPACQaAyDRGACJxgBINF4TrIHB5zLrbdBxvQdIQqqz8ghAojGA
+      pIXQ2XoWcZcGU0ZiAEmbxlCHB2N6j0HrggGQaAyARGMAJBoDINEYAInGAEg0BkCi8U8h1qQD
+      J44cwcmoLeb6Qzi4q2jV76C7Ey+ISbNwOIzr32/QewxaBU+BSDQeAdKMl0SmDy+JJEoRAyDR
+      GACJxgBINL4ITrNwOIyZ7j16j0Gr4BGARONvghMSQmdrCy5GXYGdX7odO3bacX+WflNR6hhA
+      QqYx1DEN60vPoRoAJgPo+W87fnf4Xex48UU8Y83Ve0BaI54CJSwLuQUFKCgoQMFn7fjyMy/h
+      1y9/Hj2//xP+OaX3bLRWDCAFhpKn8fzuKbz3Ae8RkakYQIoKH6zGRk//8g/PpozBAFJVuAX3
+      hacxrfcctCYMIFXBIO8RlMEYQIqUgB83rBbws/IyEwNIheJH+1/dqKuzffq+dFfi7wHWKDLe
+      iw+aj+Ni9fM4ZOdHZWcqBpCw29cBRyYngS127PzWYfy05j5+UnwG4x/DpRn/GO7uxtcAJBqP
+      AGnGa4LTh9cEE6WIR4A0C4fDeo9Ad8B3gTSQSadAmXTKth6z8hSIRGMAJBoDINEYAInGd4FI
+      NB4BSDQGQKIxABKNAZBoDIBEYwAkGv8WSGvKDXT95VW8+ZEXo9gC6+PfRsM3t2GzZpeVDeJs
+      8xn4YjdbdmH/V8qW/hm58jGaT7Tgk4FZZJd/Abu/sx+PlWpxI1QFN9wf4c23ruNLR56dvxXl
+      socTWL9k1lglDc2pvW80qkdf71RDc6qqzoXUztePqo1v9KpzWo0w/Q/1D794S3WPj6vj0V+T
+      N2/vM3pGbWpsUk8Nzm+7OXhKbWpsUs+MpnOwOXXaf1597ZeN6tFjv1GP/vBV9eIK+3z6+iW3
+      xjwF0lLoHNqcO9Cwd+HZyLAZ2/Y2YIezDee0urXc8DCGSitgW7zP6eJX7u1nd9f7bTDueQH1
+      C8/4WaX1eGGPEW3vu9I4mBNv/9EF+w9+hVcOfw0VK+2SyPolucYMQEOK143RulpYog/FBgtq
+      60bh9iqazDAT8CP7M/ffYQ8/vO5yPFy7/I7XubUPo9zthT9tk23Dvp99F48WG1e9yUAi65fs
+      GjMADV0bCWBrcXHc9uLirQiMXNNkhrHR6yjanI1gMIhgMIipSOweI7g6WwKzMWaz0YyS2asY
+      0WTKlSWyfsmuMV8Ea8xkiv3JAowmExDU5v/fUPQgNrna8K4PwKQfTs9VbLR9Fd878DSWPubA
+      ZIIp7jtNMMVv1Fwi65fMGjMAjSmKAsQc5Oe3acO8/Vns3x69JYIrbU041lyIph9thxEAbim4
+      Ffedt6DEb9RcIuuXzBrzFEhDJlMO/MNX47ZfHfYjR7en1yyUfuPreOiTbsy/xDXCFPJjOPbn
+      RRmGP2RC/HOrdhJZv2TXmAFoKL/Chrme3pi7SY+ht2cOtop8naYCoChQDIaF58xyVNrc6O2L
+      eVbt64XbVolyHcZblMj6JbvGDEBLZTvxlKEd73Tc/kylqY530G54CjvL7vB966YLrccvYHgm
+      +oc7git/O4VLj30RDgCAEY88UYeulnb4F3dT/Ghv6ULdE4/oegRIaP2SXGNeEKO1qQ4cf+U4
+      LpfVohwDuDj4ORz4+QE8pMnn7EUwcuFtnGi5AH9WCR7YCgz1DWK6bDcO/vhxlCydNivwt/8W
+      xz7cgGpHAYLOHtx68mX8pL4kffdB7TmJIyc6luacHJtFduEmZAGAuR6HDu5CEZDY+iWxxgxA
+      FxFMBacQQRZyC3KhxyetRqbm3wI1GPOQZ1z5x1qZmcDEjHLHffSRyPoltsYMgETjawASjQGQ
+      aAyARGMAJBoDINEYAInGAEg0BkCiMQASjQGQaAyARGMAJBoDINEYAInGAEg0BkCiMQASjQGQ
+      aAyARGMAJBoDINEYAInGAEg0BkCiMQASjQGQaAyARGMAJBoDINEYAInGAEg0BkCiMQASjQGQ
+      aP8D7hC8WwkjXFUAAAAASUVORK5CYII=
     </thumbnail>
   </thumbnails>
 </workbook>
