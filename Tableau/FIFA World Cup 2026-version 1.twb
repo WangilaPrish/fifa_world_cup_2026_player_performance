@@ -1509,6 +1509,9 @@
           <style-rule element='axis'>
             <format attr='title' class='0' field='[federated.11bj9pw141gvyj1ct7esa0z0ke7k].[ctd:match_id:qk]' scope='cols' value='' />
           </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
           <style-rule element='axis-title'>
             <format attr='color' field='[federated.11bj9pw141gvyj1ct7esa0z0ke7k].[ctd:match_id:qk]' value='#000000' />
           </style-rule>
@@ -1900,8 +1903,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1850' minheight='1850' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='40' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='39' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='100000' id='42' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='41' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
                 <zone forceUpdate='true' h='6125' id='5' type-v2='text' w='82400' x='800' y='1000'>
                   <formatted-text>
                     <run bold='true' fontalignment='1' fontsize='18'>FIFA World Cup 2026 Player Performance Dashboard</run>
@@ -2088,7 +2091,7 @@
       </viewpoint>
       <simple-id uuid='{B83AD264-BD10-4284-B615-B5D03DD17F6C}' />
     </window>
-    <window class='worksheet' maximized='true' name='Sheet 3'>
+    <window class='worksheet' name='Sheet 3'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2142,7 +2145,7 @@
       </viewpoint>
       <simple-id uuid='{8879B5C7-D26D-4C9F-91C4-A84DF6CD4C5A}' />
     </window>
-    <window class='worksheet' name='Sheet 5'>
+    <window class='worksheet' maximized='true' name='Sheet 5'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -3112,45 +3115,43 @@
       IJfLyUeEY8wbISDCvwe5HQmcIAIicIIIiMAJIiACJ4iACJwgAiJwggiIwAkiIAIniIAInPg/
       pFQOxLZ5jfAAAAAASUVORK5CYII=
     </thumbnail>
-    <thumbnail height='114' name='Sheet 5' width='192'>
-      iVBORw0KGgoAAAANSUhEUgAAAMAAAAByCAYAAAAF3t55AAAACXBIWXMAABJ0AAASdAHeZh94
-      AAAHiklEQVR4nO3dW2xTZQAH8L+USru5S4bDMtxst3bWbqKbGgyKATQQjAYSjAoxAc0evBAw
-      xEv0wQceNN4e9m4iMySKMTrn8FIRDZiogGHu0vXGOkbWdcPNlq1nxXI2H3ahlxVhXc9p9/1/
-      CQ985zT5J9u/39fTfefcMDk5OQkiQS1ROwCRmlgAEhoLQEJjAUhoLAAJjQUgobEAJDQWgITG
-      ApDQWAASGgtAQmMBSGgsAAmNBSChsQAkNBaAhMYCkNBYABIaC0BCYwFIaCwACY0FIKGxACQ0
-      FoCExgKQ0FgAEhoLQEJjATJMkiS1I2SV0dFRtSPEYQFIaCwACW2p2gFEsPOTbWpHoBQ4A5DQ
-      WIBElzz48fAfCCSOh9rR0tSE431JB9DecgSdY8rEo4XFAiRaVoDLrp/QfiF+OOI4jrb+fthP
-      ++IPyF78/nMIS29SLiItHBYgiQEm8wW4vZGYMRlOx0Xct2MDDD3nEIo93eOCu9YGi8IpaWGw
-      AHOw2GrR6+uNGfHA0WOEyWRG9b+dcMR0I+DzwlBlgkbpkLQgWIA5aExVMHQ4MLvYCfjQW2mD
-      BaWwWANweWYOhODsAmqsReoEpbSxAHMpsqJG34Nz02udkLMLhTYrNABMNhv6PNPVkH04G6yF
-      1aBaUkoTCzAnA6y1w3B7ZQAyvO5/UW3WTR0ymlDS6Zy6StTXA5+pEhUqJqX0sAApVFSa4XZ5
-      AHjgClhhKZ0+oLOhNu8sfBEg4OyEYXpmoNzEAqSgsdpgdHvh9zngNdtgmj1ShGrrCBzOMHxn
-      gSqTTsWUlC4WIBWdGdU3OnHipBOG2+MvcpaZzehxtMIV4Po/17EAKZXCYh3GsWM3otqcsMix
-      2FD56zGc5Po/590wOTk5qXaIxUySJDR8sVPtGJQCZwASGmeADJMkCXl5eWrHyBqjo6MoKChQ
-      O8YszgAkNBaAhMYCkNBYABIa9wQroO9pXgaN9Y/aAWJwBiChsQDXLYT2luNI2hpMOYkFuG7j
-      6G/zYETtGLQgWAASGgtAQmMBSGgsAAmNBSChsQAkNBaAhMY/hZiXNhx64w0cjhkxbNqPfRtK
-      U76CshM3xGSYJEn4+7kGtWNQClwCkdA4A2QYt0TG45ZIoizCApDQWAASGgtAQuP3AAoYOblF
-      7QhZJZv2UnAGIKFxBrgmIbS3NONMzG7uovI1WLvOihVa9VJR+liAazKO/rZxmPc+jRoAGAug
-      6087Pnz1a6zdswdbzflqB6R54hLommmRX1yM4uJiFN9qxQNb9+Lt11ajq/Fj/BZWOxvNFwuQ
-      Bk3ZFjy/LYwjR3mPiFzFAqSp5I4aLPX0xD88m3IGC5CukuW4WRrHuNo5aF5YgHQFg1l1XZuu
-      DwuQJjngx0WzCXxWXm5iAdIh+2H/1o36esv/n0tZid8DzFP0n24cbTqIMzXPY7+Vj8rOVSzA
-      NbuyDzg6NgYst2LdE6/i9dqb+aT4HMYdYRkmSRIindvVjkEp8DMACY0zQIZxT3A87gkmyiKc
-      ATJMkiS1I9BV8CqQArgEuiLbloRcApHQWAASGgtAQmMBSGi8CkRC4wxAQmMBSGgsAAmNBSCh
-      sQAkNBaAhMa/BVKafBEd33yEz3/xYhjLYV7/JBoevxOFi2ZbWR+ON/0MX+KwaQN2PVQx+9/o
-      +V/RdKgZf/VewjLjXdj2zC48WK78jVZZAEXJcB4+gM8mduH1D/ejEBfR8em7OHBYi3d3WhfH
-      1spIP9p9Bdj88kbEPTRWG3P/1JFf0Nh4Gqv3vYOGci2i5+1obGzE5TdfwfoSZeNyCaSk0Am0
-      OtaiYcf0O76mEHfuaMBaRytOLJZbyw0MoL+8EpaZ+6jO/Mu/8u7u/L4Vuu0vYNP0O762fBNe
-      2K5D6/dOxeOyAAqSvW4M19fBFPtWrzGhrn4Ybq+sWq6FFAn4seyWFVc5ww+v24h76uLvqJ1f
-      dw+Mbi/8mY2XhAVQ0IWhAFatXJk0vnLlKgSGLqiQaOGNDP+N0sJlCAaDCAaDCEcTzxjC4KUy
-      GHQJwzoDyi4NYkihnDP4GUBhen3iTx7Q6fVAUIUwGbCk9A7c5GzF1z4AY344PINYatmMZ3dv
-      wexjFPR66JNeqYc+eTDjWACFybIMJHzcnRpbHAxrnsKuNbEjUZxvfR/vNZXg/RfXQAcAEzIm
-      kl45ATl5MOO4BFKQXp8H/8Bg0vjggB95arz9KUKL8scexd1/dWLqI64O+pAfA4mdlwfgD+mR
-      PD9mFgugoKJKCy53dSfcTXoE3V2XYaksUimVAmQZskYzPe8ZUWVxo9sV3wDZ1Q23pQpGhaOx
-      AEqqWIdHNHZ81XblmUrhtq9g1zyCdRVXeV3O6EDLwVMYiMT+ckdx/rsfcPbB+2EDAOhw78Z6
-      dDTb4Z85TfbD3tyB+o33Kj4DcEOM0sJtOHjgIM5V1MGIXpzpuw2739qNuxfFc/aiGDr1JQ41
-      n4JfW4bbVwH9rj6MV2zDvpfWo2z2o48Mv/0DvPfTEtTYihF0dGHi4dfwyqYyxb8MZAFUEUU4
-      GEYUWuQX52MxPmk1Gp66BKrRFaBAN/evtRwZxWhEvuo5mcYCkND4GYCE9h++zTIcT/d+PwAA
-      AABJRU5ErkJggg==
+    <thumbnail height='94' name='Sheet 5' width='192'>
+      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
     </thumbnail>
     <thumbnail height='192' name='Sheet 6' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
