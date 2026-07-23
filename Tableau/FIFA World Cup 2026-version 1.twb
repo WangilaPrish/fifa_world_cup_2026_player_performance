@@ -2570,8 +2570,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1300' minheight='1300' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='101' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='100' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='100000' id='105' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='104' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
                 <zone forceUpdate='true' h='8125' id='40' type-v2='text' w='98400' x='800' y='1000'>
                   <formatted-text>
                     <run bold='true' fontcolor='#000000' fontname='Benton Sans Book' fontsize='16'>FIFA World Cup 2026 - Team Performance</run>
@@ -2798,8 +2798,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1900' minheight='1900' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='144' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='143' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='100000' id='148' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='147' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
                 <zone fixed-size='101' forceUpdate='true' h='13625' id='5' type-v2='text' w='82400' x='800' y='1000'>
                   <formatted-text>
                     <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Bold' fontsize='18'>FIFA World Cup 2026 Player Performance Dashboard</run>
@@ -3500,7 +3500,7 @@
       </viewpoint>
       <simple-id uuid='{6AFDEE56-EB84-4CBD-9A9C-8C16CA32DBA6}' />
     </window>
-    <window class='worksheet' name='Top 10 Goal Scorers'>
+    <window class='worksheet' maximized='true' name='Top 10 Goal Scorers'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -3570,7 +3570,7 @@
       </viewpoint>
       <simple-id uuid='{9654615B-FF61-4BAA-8B25-58197472B113}' />
     </window>
-    <window class='worksheet' maximized='true' name='Top 10 Assist Providers'>
+    <window class='worksheet' name='Top 10 Assist Providers'>
       <cards>
         <edge name='left'>
           <strip size='160'>
