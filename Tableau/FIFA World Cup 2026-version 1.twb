@@ -1880,6 +1880,51 @@
       </table>
       <simple-id uuid='{7BAC666A-408A-4413-9A9F-172252F0B0B5}' />
     </worksheet>
+    <worksheet name='Player Position Distribution'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontname='Tableau Bold'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FIFA World Cup 2026' name='federated.11bj9pw141gvyj1ct7esa0z0ke7k' />
+          </datasources>
+          <datasource-dependencies datasource='federated.11bj9pw141gvyj1ct7esa0z0ke7k'>
+            <column-instance column='[player_id]' derivation='CountD' name='[ctd:player_id:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[position]' derivation='None' name='[none:position:nk]' pivot='key' type='nominal' />
+            <column caption='Player Id' datatype='string' name='[player_id]' role='dimension' type='nominal' />
+            <column caption='Position' datatype='string' name='[position]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.11bj9pw141gvyj1ct7esa0z0ke7k].[ctd:player_id:qk]' scope='rows' value='Players' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.626187801361084' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.11bj9pw141gvyj1ct7esa0z0ke7k].[ctd:player_id:qk]</rows>
+        <cols>[federated.11bj9pw141gvyj1ct7esa0z0ke7k].[none:position:nk]</cols>
+      </table>
+      <simple-id uuid='{1234FF69-193E-4131-8CDA-A90E7FE221BC}' />
+    </worksheet>
     <worksheet name='Player rating'>
       <layout-options>
         <title>
@@ -2532,6 +2577,28 @@
     </worksheet>
   </worksheets>
   <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Player Performance'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones />
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='3' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{C2ACF361-2979-45CB-8F51-C844A76D0A83}' />
+    </dashboard>
     <dashboard enable-sort-zone-taborder='true' name='Team Performance'>
       <style />
       <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
@@ -2638,8 +2705,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1300' minheight='1300' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='109' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='108' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='100000' id='111' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='110' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
                 <zone forceUpdate='true' h='8125' id='40' type-v2='text' w='98400' x='800' y='1000'>
                   <formatted-text>
                     <run bold='true' fontcolor='#000000' fontname='Benton Sans Book' fontsize='16'>FIFA World Cup 2026 - Team Performance</run>
@@ -2866,8 +2933,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1900' minheight='1900' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='152' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='151' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='100000' id='154' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='153' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
                 <zone fixed-size='101' forceUpdate='true' h='13625' id='5' type-v2='text' w='82400' x='800' y='1000'>
                   <formatted-text>
                     <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Bold' fontsize='18'>FIFA World Cup 2026 Player Performance Dashboard</run>
@@ -3670,7 +3737,7 @@
       </viewpoint>
       <simple-id uuid='{5CC74F76-B1F7-4DC9-883C-0B1F421C2505}' />
     </window>
-    <window class='worksheet' maximized='true' name='Top 10 Players by Pass Accuracy'>
+    <window class='worksheet' name='Top 10 Players by Pass Accuracy'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -3709,6 +3776,42 @@
         </highlight>
       </viewpoint>
       <simple-id uuid='{D5B7B2A5-7CB5-46C2-9EFC-9C415B48C298}' />
+    </window>
+    <window class='worksheet' name='Player Position Distribution'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.11bj9pw141gvyj1ct7esa0z0ke7k].[none:player_id:nk]</field>
+            <field>[federated.11bj9pw141gvyj1ct7esa0z0ke7k].[none:position:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{C4C90C1F-F602-448B-8058-BC466F2BD4F1}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Player Performance'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{EB98F0D9-9DCC-4788-B140-27311C6C4D1D}' />
     </window>
   </windows>
   <thumbnails>
@@ -5631,6 +5734,96 @@
       skYIQCBrhAAEskYIQCBrhAAEskYIQCBrhAAEskYIQCBrhAAEskYIQCBrhAAEskYIQCBrhAAE
       skYIQCBrhAAEskYIQCBrhAAEskYIQCBrhAAEskYIQCBrhAAEsub/Aal7SFrbxU0pAAAAAElF
       TkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Player Performance' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Player Position Distribution' width='192'>
+      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
+      WgAAAABJRU5ErkJggg==
     </thumbnail>
     <thumbnail height='192' name='Player rating' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
